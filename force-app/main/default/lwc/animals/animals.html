@@ -1,0 +1,25 @@
+<template>
+
+    <template if:true={animalsGet}>
+        <template for:each={animalsGet} for:item="animal">
+            <p key={animal}>{animal}</p>
+        </template>
+    </template>
+
+    <div class="slds-m-vertical_large slds-align_absolute-center">
+        <lightning-button variant="brand" label="Click me" title="Click me" onclick={handleClick}></lightning-button>
+    </div>
+
+    <div  style="position:relative;">
+        <div if:true={spinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" ></lightning-spinner>
+        </div>
+    </div>
+
+    <template if:true={animalsPost}>
+        <template for:each={animalsPost} for:item="animal">
+            <p key={animal}>{animal}</p>
+        </template>
+    </template>
+
+</template>
